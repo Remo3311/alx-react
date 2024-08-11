@@ -1,11 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Footer from './Footer';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("Testing <Footer /> component", () => {
   let wrapper;
 
   beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
     wrapper = shallow(<Footer />);
   });
 
